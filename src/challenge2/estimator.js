@@ -18,7 +18,6 @@ const covid19ImpactEstimator = (data) => {
 
   const currentlyInfected = (reportedCases, num) => reportedCases * num;
   const infectionsByTime = (reportedCases, num, output) => reportedCases * num * 2 ** output;
-  // eslint-disable-next-line max-len
   const severeByTime = () => Math.trunc((15 / 100) * infectionsByTime);
   const bedsByTime = (availableBeds) => {
     const severeCases = severeByTime;
