@@ -27,8 +27,8 @@ const covid19ImpactEstimator = (data) => {
   const {
     reportedCases, periodType, timeToElapse, totalHospitalBeds
   } = data;
+  const availableBeds = Math.trunc((35 / 100) * totalHospitalBeds);
   const output = getDays(periodType, timeToElapse);
-  const availableBeds = (35 / 100) * totalHospitalBeds;
 
   return {
     data,
