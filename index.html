@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="COVID-19 | Estimator"/> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <title>Covid-19 Estimator</title> 
+  <link rel="stylesheet" href="./style.css">
+  <style></style>
+</head>
+<body> 
+  <nav class="navbar text-center"> 
+    <h1 class="navbar-title" href="#">Covid-19 Estimator</h1> 
+  </nav> 
+  <div class="main"> 
+    <div class="container"> 
+      <div id="form"> 
+        <div class="form-group"> 
+          <label for="population">population</label> 
+          <input type="number" class="form-control" id="population" data-population/> 
+        </div>
+        <div class="form-group"> 
+          <label for="timeToElapse">time to elapse</label> 
+          <input type="number" class="form-control" id="timeToElapse" data-time-to-elapse/> 
+        </div>
+        <div class="form-group"> 
+          <label for="reportedCases">reported cases</label> 
+          <input type="number" class="form-control" id="reportedCases" data-reported-cases/> 
+        </div>
+        <div class="form-group"> 
+          <label for="totalHospitalBeds">total hospital beds</label> 
+          <input type="number" class="form-control" id="noOfBeds" data-total-hospital-beds/> 
+        </div>
+        <div class="form-group"> 
+          <label for="periodType">period type</label> 
+          <select type="number" class="form-control" id="periodType" data-period-type> 
+            <option value="days">days</option> 
+            <option value="weeks">weeks</option> 
+            <option value="months">months</option> 
+          </select> 
+        </div>
+        <button class="btn btn-primary" id="submitBtn" estimatable-data>Check Results</button> 
+      </div>
+      <div id="results"> 
+        <div id="afterRequest"> 
+          <div id="impact"> 
+
+          </div>
+          <div id="severe-impact"> 
+
+          </div>
+          <div id="covid-info"> <span>Loading data. Please wait a moment...</span> 
+          </div>
+          <div id="error-message"> <span>Request failed</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">Developer 
+      <a href="https://github.com/ampaire">Phemia Ampaire</a></b> 
+    </footer>
+  </div>
+  <script src="./src/challenge4/estimator.js"></script>
+</body>
+</html>
